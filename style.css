@@ -1,108 +1,145 @@
-/* Resetting box model */
-*, *::before, *::after {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #050f0a; /* Dark jungle theme background */
-    color: #e0e0e0;
-    font-family: 'Times New Roman', Times, serif;
+    background-color: #050b07; /* നല്ലൊരു ഡാർക്ക് ഹൊറർ ലുക്ക് ബാക്ക്ഗ്രൗണ്ട് */
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 15px;
+}
+
+.main-container {
+    max-width: 600px;
+    margin: 20px auto;
     text-align: center;
+    border: 1px solid #1a3a2a;
+    padding: 30px 15px;
+    background-color: #000000;
 }
 
-/* Container matching the poster style */
-.poster-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    /* Using your image "1000047316.png" as the background with a dark overlay */
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.9)), url('1000047316.png'); 
-    background-size: cover;
-    background-position: center;
-    border: 2px solid #1a3a2a;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-}
-
-.tagline-top {
-    font-size: 14px;
-    letter-spacing: 4px;
-    color: #a3b899;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-/* Main Title styling */
-.main-title {
-    font-size: 55px;
-    font-weight: bold;
-    color: #d1c2a5; /* Golden/Silver mix color from the poster */
-    letter-spacing: 5px;
-    margin: 10px 0 0 0;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
-}
-
+/* Header Styles */
 .sub-title {
-    font-size: 24px;
-    color: #b84a39; /* Reddish tone from the poster */
-    letter-spacing: 6px;
-    margin-top: 0;
-    margin-bottom: 30px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #7a8a81;
+    margin-bottom: 15px;
     text-transform: uppercase;
 }
 
-.quote {
-    font-size: 16px;
-    font-style: italic;
-    color: #8fa89b;
+.main-title {
+    font-size: 36px;
     letter-spacing: 2px;
-    margin-bottom: 40px;
+    color: #d1b48c;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-/* Button Styling */
-.buy-btn {
+.game-version {
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: #b84a39;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.tagline {
+    font-size: 14px;
+    font-style: italic;
+    color: #a3b3a9;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+/* Button */
+.buy-button {
     display: inline-block;
-    padding: 12px 35px;
     background-color: #b84a39;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
+    padding: 12px 35px;
+    font-size: 16px;
     font-weight: bold;
     border-radius: 4px;
     letter-spacing: 1px;
-    transition: background 0.3s ease;
     box-shadow: 0 4px 15px rgba(184, 74, 57, 0.4);
+    margin-bottom: 10px;
 }
 
-.buy-btn:hover {
-    background-color: #963b2d;
+/* Content Sections (Poster and Trailer) */
+.content-section {
+    margin: 45px 0;
+    padding: 10px;
+    border: 1px solid #11251b;
+    background-color: #030705;
 }
 
-.button-container {
-    margin-bottom: 50px;
+.section-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #7a8a81;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-/* Lower Credits styling */
-.credits {
+/* ഫോട്ടോ കൃത്യമായി ഒതുങ്ങി വരാൻ */
+.poster-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #1a3a2a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* ട്രെയിലർ വീഡിയോ ബോക്സ് */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border: 1px solid #1a3a2a;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #1a3a2a;
+    margin: 40px 0;
+}
+
+/* Footer Styles */
+.production {
     font-size: 11px;
+    letter-spacing: 3px;
+    color: #7a8a81;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.credits {
+    font-size: 10px;
     letter-spacing: 2px;
     color: #7a8a81;
     text-transform: uppercase;
     line-height: 1.8;
-    border-top: 1px solid #1a3a2a;
-    padding-top: 20px;
+    margin-bottom: 25px;
 }
 
-.production {
+.release-date {
     font-size: 13px;
-    color: #9eaf9d;
-}
-
-.release-info {
-    font-size: 14px;
     color: #ffffff;
     font-weight: bold;
-    margin-top: 15px;
     letter-spacing: 3px;
+    text-transform: uppercase;
 }
