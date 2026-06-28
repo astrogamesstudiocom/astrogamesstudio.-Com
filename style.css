@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #050b07; /* നല്ലൊരു ഡാർക്ക് ഹൊറർ ലുക്ക് ബാക്ക്ഗ്രൗണ്ട് */
+    background-color: #050b07;
     font-family: 'Courier New', Courier, monospace;
     color: #ffffff;
     line-height: 1.6;
@@ -66,7 +66,7 @@ body {
     border-radius: 4px;
     letter-spacing: 1px;
     box-shadow: 0 4px 15px rgba(184, 74, 57, 0.4);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* Content Sections (Poster and Trailer) */
@@ -85,7 +85,7 @@ body {
     text-transform: uppercase;
 }
 
-/* ഫോട്ടോ കൃത്യമായി ഒതുങ്ങി വരാൻ */
+/* ഗെയിം പോസ്റ്റർ ഫോട്ടോ കൃത്യമായി വരാൻ */
 .poster-image {
     width: 100%;
     height: auto;
@@ -94,7 +94,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
-/* ട്രെയിലർ വീഡിയോ ബോക്സ് */
+/* യൂട്യൂബ് ട്രെയിലർ ബോക്സ് */
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
